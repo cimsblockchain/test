@@ -1,5 +1,8 @@
 # test
-cp docker-compose-up.yaml ../go/src/github.com/hyperledger/fabric/scripts/fabric-samples/multiple-deployment10/
+cp docker-compose-up.yaml ../go/src/github.com/hyperledger/fabric/scripts/fabric-samples/multiple-deployment10/ && cd ../go/src/github.com/hyperledger/fabric/scripts/fabric-samples/multiple-deployment10/ && docker-compose -f docker-compose-up.yaml up -d
+
+
+
 rm -r channel-artifacts && rm -r crypto-config && rm 配置文件.zip
 cp 配置文件.zip ../go/src/github.com/hyperledger/fabric/scripts/fabric-samples/multiple-deployment10/ && cd ../go/src/github.com/hyperledger/fabric/scripts/fabric-samples/multiple-deployment10/ && unzip 配置文件.zip
 
