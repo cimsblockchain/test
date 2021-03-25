@@ -1,4 +1,6 @@
 # test
+rm -r channel-artifacts && rm -r crypto-config
+cp 配置文件.zip ../go/src/github.com/hyperledger/fabric/scripts/fabric-samples/multiple-deployment10/ && cd ../go/src/github.com/hyperledger/fabric/scripts/fabric-samples/multiple-deployment10/ && unzip 配置文件.zip
 
 mkdir ../go/src/github.com/hyperledger/fabric/scripts/fabric-samples/multiple-deployment10 && cp 配置文件.zip ../go/src/github.com/hyperledger/fabric/scripts/fabric-samples/multiple-deployment10/ && cd ../go/src/github.com/hyperledger/fabric/scripts/fabric-samples/multiple-deployment10/ && unzip 配置文件.zip
 
