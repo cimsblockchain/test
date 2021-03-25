@@ -35,3 +35,5 @@ sudo vim /etc/hosts
 10.0.0.51 peer1.org9.example.com
 10.0.0.52 peer0.org10.example.com
 10.0.0.52 peer1.org10.example.com
+
+service network-manager restart
