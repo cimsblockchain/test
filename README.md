@@ -1,4 +1,8 @@
 # test
+cp mychannel.block ../go/src/github.com/hyperledger/fabric/scripts/fabric-samples/multiple-deployment10/ && cp mycc.tar.gz ../go/src/github.com/hyperledger/fabric/scripts/fabric-samples/multiple-deployment10/ && cd ../go/src/github.com/hyperledger/fabric/scripts/fabric-samples/multiple-deployment10/ && docker cp mychannel.block cli1:/opt/gopath/src/github.com/hyperledger/fabric/peer/ && docker cp mycc.tar.gz cli1:/opt/gopath/src/github.com/hyperledger/fabric/peer/ && docker exec -it cli1 bash && peer channel join -b mychannel.block && peer channel update -o orderer0.example.com:7050 -c mychannel -f ./channel-artifacts/Org2MSPanchors.tx --tls --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer0.example.com/msp/tlscacerts/tlsca.example.com-cert.pem && peer lifecycle chaincode install mycc.tar.gz && peer lifecycle chaincode approveformyorg --channelID mychannel --name mycc --version 1.0 --init-required --package-id mycc_1:87dd7f13892fb21800aaabcfd2499f553446bd5d26b079f2f939ab111a648b5c --sequence 1 --tls true --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer0.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
+
+
+
 cp docker-compose-up.yaml ../go/src/github.com/hyperledger/fabric/scripts/fabric-samples/multiple-deployment10/ && cd ../go/src/github.com/hyperledger/fabric/scripts/fabric-samples/multiple-deployment10/ && docker-compose -f docker-compose-up.yaml up -d
 
 
